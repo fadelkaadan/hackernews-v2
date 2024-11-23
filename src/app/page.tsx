@@ -9,15 +9,6 @@ export default async function Page() {
       <ul>
         {stories.map((story) => (
           <Card key={story.id} data={story} />
-          // <li key={story.id}>
-          //   <a href={story.url} target="_blank" rel="noopener noreferrer">
-          //     {story.title}
-          //   </a>
-          //   <p>
-          //     By: {story.by} | Score: {story.score} | Comments:{" "}
-          //     {story.descendants}
-          //   </p>
-          // </li>
         ))}
       </ul>
     </div>

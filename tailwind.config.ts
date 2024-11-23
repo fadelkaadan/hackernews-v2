@@ -27,10 +27,7 @@ export default {
         lg: "1.5rem",
       },
       colors: {
-        "cards-background": "#131313", // Add the actual background color for the cards
-      },
-      minWidth: {
-        "theme(sideLine.size)": "value-from-theme", // Replace with the actual size
+        "cards-background": "#131313",
       },
     },
   },
