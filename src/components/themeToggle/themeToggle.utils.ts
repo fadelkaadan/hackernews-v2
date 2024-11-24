@@ -18,12 +18,12 @@ export const themes: readonly Theme[] = [
   {
     name: "Night",
     className: "theme-night",
-    buttonColor: "bg-[#0d1117]",
+    buttonColor: "bg-[#1e3a8a]",
   },
   {
     name: "Midnight Blue",
     className: "theme-midnight-blue",
-    buttonColor: "bg-[#33375b]",
+    buttonColor: "bg-[#3b207a]",
   },
 ] as const;
 
