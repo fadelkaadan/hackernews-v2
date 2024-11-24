@@ -33,7 +33,7 @@ const Link: React.FC<Props> = ({ src }) => {
     <div className="cursor-pointer">
       <button
         onClick={addToClipboard}
-        className={`flex items-center gap-1 text-sm 
+        className={`flex items-center gap-1 text-xs 
             ${isCopying ? "text-[#83ad6c]" : "text-main-text-secondary"} 
             bg-transparent border-none cursor-pointer relative focus:outline-none
             ${
