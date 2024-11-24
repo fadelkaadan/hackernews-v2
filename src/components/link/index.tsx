@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Link: React.FC<Props> = ({ src }) => {
-  const [icon, setIcon] = useState("copy");
+  const [, setIcon] = useState("copy");
   const [isCopying, setIsCopying] = useState(false);
 
   const addToClipboard = () => {
