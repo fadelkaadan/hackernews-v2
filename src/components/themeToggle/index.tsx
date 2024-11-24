@@ -1,7 +1,8 @@
 "use client";
 
+import { themes } from "./themeToggle.utils";
 import { useState } from "react";
-import ThemeButton from "../themeButton";
+import ThemeButton from "./themeButton";
 import { SparklesIcon } from "@heroicons/react/16/solid";
 
 export default function ThemeToggle() {
@@ -10,16 +11,14 @@ export default function ThemeToggle() {
   const changeTheme = (theme: string) => {
     setDefaultTheme();
     document.documentElement.classList.add(theme);
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("theme", "theme-" + theme);
     setShowToggles(false);
   };
 
   const setDefaultTheme = () => {
-    document.documentElement.classList.remove(
-      "theme-dark",
-      "theme-light",
-      "theme-night"
-    );
+    themes.forEach(({ className }) => {
+      document.documentElement.classList.remove(className);
+    });
     localStorage.setItem("theme", "");
   };
 
@@ -27,18 +26,13 @@ export default function ThemeToggle() {
     <div>
       {showToggles ? (
         <div className="flex gap-2">
-          <ThemeButton
-            onClick={() => changeTheme("theme-night")}
-            theme="theme-night"
-          />
-          <ThemeButton
-            onClick={() => changeTheme("theme-dark")}
-            theme="theme-dark"
-          />
-          <ThemeButton
-            onClick={() => changeTheme("theme-light")}
-            theme="theme-light"
-          />
+          {themes.map((theme) => (
+            <ThemeButton
+              key={theme.name}
+              onClick={() => changeTheme(theme.className)}
+              color={theme.buttonColor}
+            />
+          ))}
         </div>
       ) : (
         <button onClick={() => setShowToggles(true)}>
