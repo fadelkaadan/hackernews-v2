@@ -4,10 +4,12 @@ export default function ThemeToggle() {
   const changeTheme = (theme: string) => {
     setDefaultTheme();
     document.documentElement.classList.add(theme);
+    localStorage.setItem("theme", theme);
   };
 
   const setDefaultTheme = () => {
     document.documentElement.classList.remove("theme-dark", "theme-light");
+    localStorage.setItem("theme", "");
   };
 
   return (
