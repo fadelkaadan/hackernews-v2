@@ -1,23 +1,23 @@
 "use client";
 
+import {
+  ClipboardDocumentCheckIcon,
+  ClipboardDocumentListIcon,
+} from "@heroicons/react/24/outline";
 import copy from "copy-to-clipboard";
 import { useState } from "react";
-import { Icon } from "../icon";
 
 interface Props {
   src: string;
 }
 
 const Link: React.FC<Props> = ({ src }) => {
-  const [, setIcon] = useState("copy");
   const [isCopying, setIsCopying] = useState(false);
 
   const addToClipboard = () => {
     copy(src);
-    setIcon("checkCircle");
     setIsCopying(true);
     setTimeout(() => {
-      setIcon("copy");
       setIsCopying(false);
     }, 1500);
   };
@@ -43,11 +43,17 @@ const Link: React.FC<Props> = ({ src }) => {
             }
             pb-1`}
       >
-        <Icon
-          name={isCopying ? "checkCircle" : "copy"}
-          color={isCopying ? "[#83ad6c]" : "textPrimary"}
-        />
-        {isCopying ? "copied" : getHostname(src)}
+        {isCopying ? (
+          <>
+            <ClipboardDocumentCheckIcon className={"size-4 text-[#83ad6c]"} />
+            copied
+          </>
+        ) : (
+          <>
+            <ClipboardDocumentListIcon className={"size-4 text-textPrimary"} />
+            {getHostname(src)}
+          </>
+        )}
       </button>
     </div>
   );

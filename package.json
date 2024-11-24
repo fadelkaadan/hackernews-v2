@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "copy-to-clipboard": "^3.3.3",
     "javascript-time-ago": "^2.5.11",
     "next": "15.0.3",
