@@ -38,17 +38,6 @@
   --button-shadow: #464646;
 }
 
-.theme-midnight-blue {
-  --background: #12163a;
-  --text-primary: #e4e7fa;
-  --text-secondary: #b3b7d9;
-  --text-disabled: #7c80a6;
-  --border-radius: 10px;
-  --card-background: #1d214a;
-  --card-shadow: rgba(18, 22, 58, 0.4);
-  --button-shadow: rgba(18, 22, 58, 0.5);
-}
-
 body, html {
   color: var(--text-primary);
   background: var(--background);
