@@ -8,7 +8,7 @@ type Props = {
 
 const Content: React.FC<Props> = ({ data }) => {
   return (
-    <div className="w-full p-4 flex flex-col justify-around items-start break-words">
+    <div className="w-full p-4 flex flex-col justify-around items-start rounded-r-lg break-words text-textPrimary bg-cardBackground">
       <TopInfo author={data.by} time={data.time} score={data.score} />
       <div className="text-main-text-primary">
         <a

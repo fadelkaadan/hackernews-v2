@@ -2,7 +2,7 @@
 
 import copy from "copy-to-clipboard";
 import { useState } from "react";
-import Image from "next/image";
+import { Icon } from "../icon";
 
 interface Props {
   src: string;
@@ -43,16 +43,11 @@ const Link: React.FC<Props> = ({ src }) => {
             }
             pb-1`}
       >
-        <Image
-          className={`dark:invert`}
-          src={`/${icon}.svg`}
-          style={{ fill: isCopying ? "#fff" : "#83ad6c" }}
-          alt="Check logo"
-          width={15}
-          height={15}
-          priority
+        <Icon
+          name={isCopying ? "checkCircle" : "copy"}
+          color={isCopying ? "[#83ad6c]" : "textPrimary"}
         />
-        {isCopying ? "Copied" : getHostname(src)}
+        {isCopying ? "copied" : getHostname(src)}
       </button>
     </div>
   );

@@ -7,7 +7,7 @@ interface Props {
 
 const Card: React.FC<Props> = ({ data }) => {
   return (
-    <div className="w-full flex rounded-lg text-[#e7e7e7] bg-cards-background shadow-lg animate-fadeIn">
+    <div className="w-full flex rounded-lg shadow-lg animate-fadeIn">
       <div
         className="min-w-4
             h-auto bg-gradient-to-r from-pink-500 to-blue-600

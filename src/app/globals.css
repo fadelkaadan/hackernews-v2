@@ -2,20 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0d1117;
+  --text-primary: #e7e7e7;
+  --text-secondary: #cccccc;
+  --text-disabled: #acacac;
+  --border-radius: 15px;
+  --card-background: #161b22;
+  --card-shadow: transparent;
+  --button-shadow: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Theme */
+.theme-dark {
+  --background: #000;
+  --text-primary: #c1c1c1;
+  --text-secondary: #b7b7b7;
+  --text-disabled: #9c9c9c;
+  --border-radius: 15px;
+  --card-background: #131313;
+  --card-shadow: transparent;
+  --button-shadow: transparent;
+}
+
+/* Light Theme */
+.theme-light {
+  --background: #d1d1d1;
+  --text-primary: #1d1d1d;
+  --text-secondary: #2b2b2b;
+  --text-disabled: #4b4b4b;
+  --border-radius: 15px;
+  --card-background: #dfdfdf;
+  --card-shadow: #b3b3b3;
+  --button-shadow: #464646;
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-primary);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
