@@ -11,7 +11,7 @@ export default function ThemeToggle() {
   const changeTheme = (theme: string) => {
     setDefaultTheme();
     document.documentElement.classList.add(theme);
-    localStorage.setItem("theme", "theme-" + theme);
+    localStorage.setItem("theme", theme);
     setShowToggles(false);
   };
 
