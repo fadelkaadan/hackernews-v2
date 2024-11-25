@@ -5,7 +5,6 @@ import Link from "../link";
 import TopInfo from "../topInfo";
 import CommentsButton from "../comments/commentButton";
 import { useState } from "react";
-import { ChatBubbleOvalLeftIcon } from "@heroicons/react/16/solid";
 
 type Props = {
   data: IStory;
@@ -31,7 +30,6 @@ const Content: React.FC<Props> = ({ data }) => {
             isOpen={isCommentsOpen}
             onClick={() => setIsCommentsOpen((prev) => !prev)}
             label={data.kids && data.kids.length === 1 ? "comment" : "comments"}
-            icon={ChatBubbleOvalLeftIcon}
           />
         </div>
       </div>
