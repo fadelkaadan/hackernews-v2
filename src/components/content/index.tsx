@@ -1,12 +1,19 @@
+"use client";
+
 import { IStory } from "@/shared/types";
 import Link from "../link";
 import TopInfo from "../topInfo";
+import CommentsButton from "../comments/commentButton";
+import { useState } from "react";
+import { ChatBubbleOvalLeftIcon } from "@heroicons/react/16/solid";
 
 type Props = {
   data: IStory;
 };
 
 const Content: React.FC<Props> = ({ data }) => {
+  const [isCommentsOpen, setIsCommentsOpen] = useState(false);
+
   return (
     <div className="w-full p-4 flex flex-col justify-around items-start rounded-r-lg break-words text-textPrimary bg-cardBackground">
       <TopInfo author={data.by} time={data.time} score={data.score} />
@@ -18,6 +25,15 @@ const Content: React.FC<Props> = ({ data }) => {
           {data.title}
         </a>
         <Link src={data.url} />
+        <div>
+          <CommentsButton
+            comments={data.kids}
+            isOpen={isCommentsOpen}
+            onClick={() => setIsCommentsOpen((prev) => !prev)}
+            label={data.kids && data.kids.length === 1 ? "comment" : "comments"}
+            icon={ChatBubbleOvalLeftIcon}
+          />
+        </div>
       </div>
     </div>
   );

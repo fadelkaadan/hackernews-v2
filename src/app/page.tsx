@@ -1,6 +1,10 @@
 import Card from "../components/card";
 import { fetchStories } from "../lib/api";
 
+// TODO:
+// - Add comment section
+// - Add load more functionality
+
 export default async function Page() {
   const stories = await fetchStories();
 
