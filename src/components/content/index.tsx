@@ -13,7 +13,7 @@ const Content: React.FC<Props> = ({ data }) => {
       <div className="text-main-text-primary flex flex-col gap-1">
         <a
           href={data.url}
-          className="text-main-text-primary text-lg no-underline visited:text-main-text-disabled mb-0 pl-0.5"
+          className="text-main-text-primary text-lg no-underline visited:text-textDisabled mb-0 pl-0.5"
         >
           {data.title}
         </a>
