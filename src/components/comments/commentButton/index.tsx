@@ -1,6 +1,5 @@
 import { ChevronUpIcon } from "@heroicons/react/16/solid";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/outline";
-import { ReactElement } from "react";
 
 interface CommentsProps {
   comments: number[];
