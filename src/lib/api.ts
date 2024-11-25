@@ -3,7 +3,7 @@ export async function fetchStories(limit: number = 10) {
     "https://hacker-news.firebaseio.com/v0/topstories.json";
   const STORY_URL = "https://hacker-news.firebaseio.com/v0/item";
 
-  const idsResponse = await fetch(TOP_STORIES_URL);
+  const idsResponse = await fetch(TOP_STORIES_URL, { cache: "no-store" });
   const storyIds: number[] = await idsResponse.json();
 
   return Promise.all(
