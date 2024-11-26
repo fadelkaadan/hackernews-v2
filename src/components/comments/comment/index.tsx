@@ -8,7 +8,7 @@ interface Props {
 
 const Comment: React.FC<Props> = ({ comment: { text, by, time } }) => {
   return text ? (
-    <div className="border-l pl-3 pt-4">
+    <div className="border-l border-textPrimary pl-3 pt-4 animate-fadeIn">
       <TopInfo author={by} time={time} />
       <CommentContent text={text} />
     </div>

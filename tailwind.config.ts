@@ -31,6 +31,7 @@ export default {
         textPrimary: "var(--text-primary)",
         textSecondary: "var(--text-secondary)",
         textDisabled: "var(--text-disabled)",
+        textHover: "var(--text-hover)",
         cardBackground: "var(--card-background)",
         cardShadow: "var(--card-shadow)",
         buttonShadow: "var(--button-shadow)",

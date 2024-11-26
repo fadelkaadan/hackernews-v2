@@ -5,9 +5,10 @@
 /* DEFAULT: Night Theme */
 :root {
   --background: #0d1117;
-  --text-primary: #e7e7e7;
-  --text-secondary: #cccccc;
+  --text-primary: #eeeeee;
+  --text-secondary: #cdcdcd;
   --text-disabled: #9a9a9a;
+  --text-hover: #fff;
   --border-radius: 15px;
   --card-background: #161b22;
   --card-shadow: transparent;
@@ -20,6 +21,7 @@
   --text-primary: #c1c1c1;
   --text-secondary: #b7b7b7;
   --text-disabled: #9a9a9a;
+  --text-hover: #fff;
   --border-radius: 15px;
   --card-background: #131313;
   --card-shadow: transparent;
@@ -29,9 +31,10 @@
 /* Light Theme */
 .theme-light {
   --background: #d1d1d1;
-  --text-primary: #1d1d1d;
+  --text-primary: #1a1a1a;
   --text-secondary: #2b2b2b;
   --text-disabled: #9a9a9a;
+  --text-hover: #000000;
   --border-radius: 15px;
   --card-background: #dfdfdf;
   --card-shadow: #b3b3b3;

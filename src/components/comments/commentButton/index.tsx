@@ -24,10 +24,10 @@ const CommentsButton: React.FC<CommentsProps> = ({
       className={`${
         isDisabled
           ? "text-textDisabled border-textDisabled"
-          : "text-gray-300 border-gray-300 hover:text-white hover:border-white"
+          : "text-textPrimary hover:text-textHover hover:border-textHover"
       }
         flex bg-transparent items-center justify-center gap-1 border border-textPrimary
-        text-textPrimary rounded-md py-1 pl-1.5 pr-2 outline-none text-nowrap w-auto text-xs mt-2 mb-5`}
+        rounded-md py-1 pl-1.5 pr-2 outline-none text-nowrap w-auto text-xs mt-2 mb-5`}
     >
       {isOpen ? (
         <ChevronUpIcon className="size-4" />
