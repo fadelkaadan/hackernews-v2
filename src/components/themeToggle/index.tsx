@@ -36,7 +36,7 @@ export default function ThemeToggle() {
         </div>
       ) : (
         <button onClick={() => setShowToggles(true)}>
-          <SparklesIcon className="size-8 text-primaryText  animate-fadeIn" />
+          <SparklesIcon className="size-8 text-primaryText animate-fadeIn" />
         </button>
       )}
     </div>

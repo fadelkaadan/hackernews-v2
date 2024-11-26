@@ -31,6 +31,7 @@ const Content: React.FC<Props> = ({ data }) => {
             isOpen={isCommentsOpen}
             onClick={() => setIsCommentsOpen((prev) => !prev)}
             label={data.kids && data.kids.length === 1 ? "comment" : "comments"}
+            isComment
           />
 
           {isCommentsOpen ? <Comments commentIds={data.kids} /> : null}
