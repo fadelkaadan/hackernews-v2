@@ -22,9 +22,11 @@ const Comments: React.FC<Props> = ({ commentIds }) => {
   return (
     <div>
       {comments.length > 0 ? (
-        comments.map((comment) => (
-          <Comment key={comment.id} comment={comment} />
-        ))
+        <div className="mt-5">
+          {comments.map((comment) => (
+            <Comment key={comment.id} comment={comment} />
+          ))}
+        </div>
       ) : (
         <LoadingIndicator />
       )}
