@@ -11,7 +11,7 @@ const CommentContent: React.FC<Props> = ({ text }) => {
   return (
     <div
       style={{ overflowWrap: "anywhere" }}
-      className="text-xs"
+      className="text-sm"
       dangerouslySetInnerHTML={{ __html: stringToHTML(text) }}
     ></div>
   );
