@@ -6,9 +6,7 @@ interface Props {
   comment: IComment;
 }
 
-const Comment: React.FC<Props> = ({
-  comment: { id, text, kids, by, time },
-}) => {
+const Comment: React.FC<Props> = ({ comment: { text, by, time } }) => {
   return text ? (
     <div className="border-l pl-3 pt-4">
       <TopInfo author={by} time={time} />

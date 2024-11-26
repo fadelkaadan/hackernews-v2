@@ -4,8 +4,8 @@ interface Props {
 
 const CommentContent: React.FC<Props> = ({ text }) => {
   const stringToHTML = (str: string) => {
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(str, "text/html");
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(str, "text/html");
     return doc.body.innerHTML;
   };
   return (
