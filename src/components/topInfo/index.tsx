@@ -23,10 +23,12 @@ const TopInfo: React.FC<Props> = ({ author, time, score }) => {
         <ClockIcon className="size-4 text-primaryText" />
         {getTimeAgo(time)}
       </div>
-      <div className="flex text-xs items-center gap-1">
-        <ArrowUpCircleIcon className="size-4 text-primaryText" />
-        {score}
-      </div>
+      {score ? (
+        <div className="flex text-xs items-center gap-1">
+          <ArrowUpCircleIcon className="size-4 text-primaryText" />
+          {score}
+        </div>
+      ) : null}
     </div>
   );
 };
